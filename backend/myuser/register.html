@@ -1,0 +1,45 @@
+<!-- community/myuser/register.html -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Register</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="row mt-5">
+        <div class="col-12 text-center">
+          <h1>회원가입</h1>
+        </div>
+      </div>
+      <div class="row mt-5">
+        <div class="col-12">
+          <form method="POST" action=".">
+            {% csrf_token%}
+            <div class="form-group">
+              <label for="usrname">사용자 이름</label>
+              <input type="text" class="form-control" id="usrname" placeholder="사용자 이름" name="username" />
+            </div>
+            <div class="form-group">
+              <label for="password">비밀번호</label>
+              <input type="password" class="form-control" id="password" placeholder="비밀번호" name="password" />
+            </div>
+            <div class="form-group">
+              <label for="re-password">비밀번호 확인</label>
+              <input
+                type="password"
+                class="form-control"
+                id="re-password"
+                placeholder="비밀번호 확인"
+                name="re-password"
+              />
+            </div>
+            <button type="submit" class="btn btn-primary">등록</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
